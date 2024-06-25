@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <script>
+    function adjustShowingResults() {
+        var showingResults = document.getElementById('showingResults');
+        var word1 = document.getElementById('word1');
+        var word2 = document.getElementById('word2');
+        var word3 = document.getElementById('word3');
+
+
+        var leftEdge;
+        var rightEdge;
+
+
+        function setEdges(word) {
+            leftEdge = word.getBoundingClientRect().left + window.pageXOffset;
+            rightEdge = word.getBoundingClientRect().right + window.pageXOffset;
+        }
+
+        // Check the unigrams in order and set the edges for the first empty one.
+        if (word1 && word1.value.trim() === '') {
+            setEdges(word1);
+        } else if (word2 && word2.value.trim() === '') {
+            setEdges(word2);
+        } else if (word3 && word3.value.trim() === '') {
+            setEdges(word3);
+        } else {
+            // If no empty fields, retain the current position.
+            return;
+        }
+
+
+        showingResults.style.position = 'absolute';
+        showingResults.style.left = leftEdge + 'px';
+        showingResults.style.width = (rightEdge - leftEdge) + 'px';
+    }
+
+
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.type === 'childList' || mutation.type === 'attributes') {
+                adjustShowingResults();
+            }
+        });
+    });
+
+    const config = { attributes: true, childList: true, subtree: true };
+
+    observer.observe(document.body, config);
+
+    document.addEventListener('DOMContentLoaded', adjustShowingResults);
+    window.addEventListener('resize', adjustShowingResults);
+    window.addEventListener('unload', () => observer.disconnect());
+    </script>
+
+</body>
+</html>
