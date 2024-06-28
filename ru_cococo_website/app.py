@@ -9,20 +9,19 @@ from ru_cococo_website.Backend.search import search
 def hi():
     if 'language' not in session:
         session['language'] = get_locale()
-    return redirect('simple')
+    return redirect('main')
 
 
 @website.route('/error')
 def error():
     print("error")
-    return redirect('simple')
+    return redirect('main')
 
 
-@website.route('/simple')
-def collocations():
+@website.route('/main')
+def main():
     if 'language' not in session:
         session['language'] = get_locale()
-    print("collocations", session['language'])
     return render_template('main.html', lang=session['language'])
 
 
@@ -30,25 +29,11 @@ def collocations():
 def about():
     if 'language' not in session:
         session['language'] = get_locale()
-    print("about", session['language'])
     return render_template('about.html', lang=session['language'])
 
 
-@website.route('/advanced')
-def colligations():
-    if 'language' not in session:
-        session['language'] = get_locale()
-    print("colligations", session['language'])
-    return render_template('Colligations.html', lang=session['language'])
-
-
-@website.route('/public/api/collocations/search', methods=['GET'])
-def calc_collocations():
-    return search(query=request.args)
-
-
-@website.route('/public/api/colligations/search', methods=['GET'])
-def calc_colligations():
+@website.route('/public/api/search', methods=['GET'])
+def sql_search():
     return search(query=request.args)
 
 
@@ -56,7 +41,6 @@ def calc_colligations():
 def set_language(current_lang):
     if current_lang in ["en", "ru"]:
         session['language'] = "ru" if current_lang == 'en' else "en"
-        print("change_lang", session['language'])
         return jsonify(success=True)  # Return JSON success response
     else:
         return jsonify(success=False)

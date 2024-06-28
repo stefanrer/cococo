@@ -8,6 +8,7 @@ from ru_cococo_website.Backend.debug import timeit
 @timeit
 def search(query):
     request = WebRequest(query)
+    # print(request)
     if request.advanced:
         return colligations_search(request)
     else:

@@ -227,7 +227,7 @@ def get_search_conditions(request: WebRequest):
             "gender": lambda values: or_(*[Morphology1.gender == value for value in values]),
             "animacy": lambda values: or_(*[Morphology1.animacy == value for value in values]),
             "number": lambda values: or_(*[Morphology1.number == value for value in values]),
-            "caseValue": lambda values: or_(*[Morphology1.case == value for value in values]),
+            "case": lambda values: or_(*[Morphology1.case == value for value in values]),
             "verbform": lambda values: or_(*[Morphology1.verbform == value for value in values]),
             "mood": lambda values: or_(*[Morphology1.mood == value for value in values]),
             "tense": lambda values: or_(*[Morphology1.tense == value for value in values]),
@@ -242,7 +242,7 @@ def get_search_conditions(request: WebRequest):
             "gender": lambda values: or_(*[Morphology2.gender == value for value in values]),
             "animacy": lambda values: or_(*[Morphology2.animacy == value for value in values]),
             "number": lambda values: or_(*[Morphology2.number == value for value in values]),
-            "caseValue": lambda values: or_(*[Morphology2.case == value for value in values]),
+            "case": lambda values: or_(*[Morphology2.case == value for value in values]),
             "verbform": lambda values: or_(*[Morphology2.verbform == value for value in values]),
             "mood": lambda values: or_(*[Morphology2.mood == value for value in values]),
             "tense": lambda values: or_(*[Morphology2.tense == value for value in values]),
@@ -257,7 +257,7 @@ def get_search_conditions(request: WebRequest):
             "gender": lambda values: or_(*[Morphology3.gender == value for value in values]),
             "animacy": lambda values: or_(*[Morphology3.animacy == value for value in values]),
             "number": lambda values: or_(*[Morphology3.number == value for value in values]),
-            "caseValue": lambda values: or_(*[Morphology3.case == value for value in values]),
+            "case": lambda values: or_(*[Morphology3.case == value for value in values]),
             "verbform": lambda values: or_(*[Morphology3.verbform == value for value in values]),
             "mood": lambda values: or_(*[Morphology3.mood == value for value in values]),
             "tense": lambda values: or_(*[Morphology3.tense == value for value in values]),
@@ -272,7 +272,7 @@ def get_search_conditions(request: WebRequest):
             "gender": lambda values: or_(*[Morphology4.gender == value for value in values]),
             "animacy": lambda values: or_(*[Morphology4.animacy == value for value in values]),
             "number": lambda values: or_(*[Morphology4.number == value for value in values]),
-            "caseValue": lambda values: or_(*[Morphology4.case == value for value in values]),
+            "case": lambda values: or_(*[Morphology4.case == value for value in values]),
             "verbform": lambda values: or_(*[Morphology4.verbform == value for value in values]),
             "mood": lambda values: or_(*[Morphology4.mood == value for value in values]),
             "tense": lambda values: or_(*[Morphology4.tense == value for value in values]),
@@ -291,6 +291,7 @@ def get_search_conditions(request: WebRequest):
     if request.part1:
         conditions.append(condition_dict["part1"](request.part1))
     if request.filter1 is not None:
+        print(request.filter1)
         filters = {morph: values.split(",") for morph, values in
                    (morph_filter.split(":") for morph_filter in request.filter1.split(";") if morph_filter)}
         print(filters)

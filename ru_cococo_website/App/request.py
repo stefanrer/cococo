@@ -46,6 +46,8 @@ class WebRequest:
                     value = True
                 else:
                     value = False
+            elif value_type == str:
+                value = str(value).lower()
             else:
                 value = value_type(value)
         return value if value != empty_value else None

@@ -191,7 +191,7 @@ body.loading .overlay {
 	color: #FFF;
 	font-family: Akrobat-ExtraBold, sans-serif;
 	margin: 0 auto;
-	padding: 1.5% 2% 2% 2%;
+	padding: 1.5% 2% 1% 2%;
 	width: 100%;
 }
 
@@ -362,6 +362,10 @@ input:checked+.slider:before {
 	row-gap: 0.4em;
 }
 
+.user-query {
+
+}
+
 .pos-filter {
 	/*margin-top: 0.4rem;*/
 	display: flex;
@@ -377,6 +381,10 @@ input:checked+.slider:before {
 	display: flex;
 	align-items: center;
 	height: 100%;
+}
+
+.colligation-word-part {
+
 }
 
 .words-more-button {
@@ -432,6 +440,7 @@ input:checked+.slider:before {
 	height: 1.5em;
 	width: 1.5em;
 	text-align: center;
+	user-select: none;
 }
 
 .search-buttons {
@@ -460,6 +469,19 @@ input:checked+.slider:before {
     justify-content: center;
     align-items: center;
 	user-select: none;
+}
+
+.co-checkbox {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	user-select: none;
+}
+
+.co-checkbox input[type=checkbox] {
+    width: 1rem;
+    height: 1rem;
+    /*margin-left: 0;*/
 }
 
 .plus-button {
@@ -545,7 +567,7 @@ input:-webkit-autofill {
 	top: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	z-index: 1; /* Sit on top */
-	/*min-width: 40em;*/
+	min-width: 20em;
 	/*min-height: 32em;*/
 }
 
@@ -594,6 +616,7 @@ input:-webkit-autofill {
 	gap: 0.5rem;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
+	min-width: 5em;
 }
 
 .enter-button {

@@ -7,7 +7,7 @@
     <title>CoCoCo: Collocations, Colligations, and Corpora</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="module" src="../static/javascript/translateButton.js"></script>
-    <script type="module" src="../static/javascript/collocations.js"></script>
+    <script type="module" src="../static/javascript/main.js"></script>
 </head>
 <body>
     <div class="header">
@@ -18,7 +18,6 @@
         <nav class="navbar">
             <ul>
                 <li><a class="nav-link" href="/about">О НАС</a></li>
-                <li><a class="nav-link" href="/advanced">РАСШИРЕННЫЙ ПОИСК</a></li>
                 <li><a class="nav-lang" id="language-switch" data-lang="{{ lang }}" href="#">ENG</a></li>
             </ul>
         </nav>
@@ -186,23 +185,14 @@
                     </div>
                     <div class="co-button" id="search-button">Поиск</div>
                     <div class="co-button" id="reset-button">Отмена</div>
+                    <div class="co-checkbox" id="advanced-checkbox"><input type="checkbox" id="advancedSearch"><label for="advancedSearch" style="cursor: pointer;">Расширенный</label></div>
 
                 </div>
-
-
             </div>
-
+            <div class="user-query" id="user-query"></div>
         </div>
     </div>
-    <div class="collocation-results" id="collocation-results" style="display: none">
-
-    </div>
-    <div id="morphology-settings" style="display: none">
-        <div id="filter1"></div>
-        <div id="filter2"></div>
-        <div id="filter3"></div>
-        <div id="filter4"></div>
-    </div>
+    <div id="results"></div>
     <div class="footer">
         <div class="affiliation">
             <a href="https://www.helsinki.fi/en" target="_blank">Хельсинкский университет, 2015—2024</a>

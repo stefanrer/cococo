@@ -1,192 +1,192 @@
 const GenderFeature = {
     name:   'gender',
-    title:  'Род',
-    values: [{value: 'masc', title: 'Мужской'}, {value: 'fem', title: 'Женский'}, {value: 'neut', title: 'Средний'}]
+    title:  'род',
+    values: [{value: 'masc', title: 'мужской'}, {value: 'fem', title: 'женский'}, {value: 'neut', title: 'средний'}]
 };
 
 const NumberFeature = {
     name:   'number',
-    title:  'Число',
-    values: [{value: 'sing', title: 'Единственное'}, {value: 'plur', title: 'Множественное'}]
+    title:  'число',
+    values: [{value: 'sing', title: 'единственное'}, {value: 'plur', title: 'множественное'}]
 };
 
 const AnimacyFeature = {
     name: 'animacy',
-    title: 'Одушевленность',
-    values: [{value: 'anim', title: 'Одушевленное'}, {value: 'inan', title: 'Неодушевленное'}]
+    title: 'одушевленность',
+    values: [{value: 'anim', title: 'одушевленное'}, {value: 'inan', title: 'неодушевленное'}]
 };
 
 const CaseFeature = {
-    name:   'caseValue',
-    title:  'Падеж',
+    name:   'case',
+    title:  'падеж',
     values: [
-        {value: 'nom', title: 'Именительный'}, {value: 'gen', title: 'Родительный'}, {value: 'dat', title: 'Дательный'},
-        {value: 'acc', title: 'Винительный'}, {value: 'ins', title: 'Творительный'}, {value: 'loc', title: 'Предложный'},
-        {value: 'par', title: 'Разделительный'}, {value: 'voc', title: 'Звательный'}
+        {value: 'nom', title: 'именительный'}, {value: 'gen', title: 'родительный'}, {value: 'dat', title: 'дательный'},
+        {value: 'acc', title: 'винительный'}, {value: 'ins', title: 'творительный'}, {value: 'loc', title: 'предложный'},
+        {value: 'par', title: 'разделительный'}, {value: 'voc', title: 'звательный'}
     ]
 };
 
 const nounCaseFeature = {
-    name:   'caseValue',
-    title:  'Падеж',
+    name:   'case',
+    title:  'падеж',
     values: [
-        {value: 'nom', title: 'Именительный'}, {value: 'gen', title: 'Родительный'}, {value: 'dat', title: 'Дательный'},
-        {value: 'acc', title: 'Винительный'}, {value: 'ins', title: 'Творительный'}, {value: 'loc', title: 'Предложный'},
-        {value: 'par', title: 'Разделительный'}
+        {value: 'nom', title: 'именительный'}, {value: 'gen', title: 'родительный'}, {value: 'dat', title: 'дательный'},
+        {value: 'acc', title: 'винительный'}, {value: 'ins', title: 'творительный'}, {value: 'loc', title: 'предложный'},
+        {value: 'par', title: 'разделительный'}
     ]
 };
 
 
 const verbCaseFeature = {
-    name:   'caseValue',
-    title:  'Падеж',
+    name:   'case',
+    title:  'падеж',
     values: [
-        {value: 'nom', title: 'Именительный'}, {value: 'gen', title: 'Родительный'}, {value: 'dat', title: 'Дательный'},
-        {value: 'acc', title: 'Винительный'}, {value: 'ins', title: 'Творительный'}, {value: 'loc', title: 'Предложный'}
+        {value: 'nom', title: 'именительный'}, {value: 'gen', title: 'родительный'}, {value: 'dat', title: 'дательный'},
+        {value: 'acc', title: 'винительный'}, {value: 'ins', title: 'творительный'}, {value: 'loc', title: 'предложный'}
     ]
 };
 
 const adjCaseFeature = {
-    name:   'caseValue',
-    title:  'Падеж',
+    name:   'case',
+    title:  'падеж',
     values: [
-        {value: 'nom', title: 'Именительный'}, {value: 'gen', title: 'Родительный'}, {value: 'dat', title: 'Дательный'},
-        {value: 'acc', title: 'Винительный'}, {value: 'ins', title: 'Творительный'}, {value: 'loc', title: 'Предложный'}
+        {value: 'nom', title: 'именительный'}, {value: 'gen', title: 'родительный'}, {value: 'dat', title: 'дательный'},
+        {value: 'acc', title: 'винительный'}, {value: 'ins', title: 'творительный'}, {value: 'loc', title: 'предложный'}
     ]
 };
 
 const pronCaseFeature = {
-    name:   'caseValue',
-    title:  'Падеж',
+    name:   'case',
+    title:  'падеж',
     values: [
-        {value: 'nom', title: 'Именительный'}, {value: 'gen', title: 'Родительный'}, {value: 'dat', title: 'Дательный'},
-        {value: 'acc', title: 'Винительный'}, {value: 'ins', title: 'Творительный'}, {value: 'loc', title: 'Предложный'}
+        {value: 'nom', title: 'именительный'}, {value: 'gen', title: 'родительный'}, {value: 'dat', title: 'дательный'},
+        {value: 'acc', title: 'винительный'}, {value: 'ins', title: 'творительный'}, {value: 'loc', title: 'предложный'}
     ]
 };
 
 const adpCaseFeature = {
-    name:   'caseValue',
-    title:  'Падеж',
+    name:   'case',
+    title:  'падеж',
     values: [
-        {value: 'nom', title: 'Именительный'}, {value: 'gen', title: 'Родительный'}, {value: 'dat', title: 'Дательный'},
-        {value: 'acc', title: 'Винительный'}, {value: 'ins', title: 'Творительный'}, {value: 'loc', title: 'Предложный'}
+        {value: 'nom', title: 'именительный'}, {value: 'gen', title: 'родительный'}, {value: 'dat', title: 'дательный'},
+        {value: 'acc', title: 'винительный'}, {value: 'ins', title: 'творительный'}, {value: 'loc', title: 'предложный'}
     ]
 };
 
 const numCaseFeature = {
-    name:   'caseValue',
-    title:  'Падеж',
+    name:   'case',
+    title:  'падеж',
     values: [
-        {value: 'nom', title: 'Именительный'}, {value: 'gen', title: 'Родительный'}, {value: 'dat', title: 'Дательный'},
-        {value: 'acc', title: 'Винительный'}, {value: 'ins', title: 'Творительный'}, {value: 'loc', title: 'Предложный'}
+        {value: 'nom', title: 'именительный'}, {value: 'gen', title: 'родительный'}, {value: 'dat', title: 'дательный'},
+        {value: 'acc', title: 'винительный'}, {value: 'ins', title: 'творительный'}, {value: 'loc', title: 'предложный'}
     ]
 };
 
 const propnCaseFeature = {
-    name:   'caseValue',
-    title:  'Падеж',
+    name:   'case',
+    title:  'падеж',
     values: [
-        {value: 'nom', title: 'Именительный'}, {value: 'gen', title: 'Родительный'}, {value: 'dat', title: 'Дательный'},
-        {value: 'acc', title: 'Винительный'}, {value: 'ins', title: 'Творительный'}, {value: 'loc', title: 'Предложный'},
-        {value: 'voc', title: 'Звательный'}
+        {value: 'nom', title: 'именительный'}, {value: 'gen', title: 'родительный'}, {value: 'dat', title: 'дательный'},
+        {value: 'acc', title: 'винительный'}, {value: 'ins', title: 'творительный'}, {value: 'loc', title: 'предложный'},
+        {value: 'voc', title: 'звательный'}
     ]
 };
 
 const VerbFormFeature = {
     name: 'verbform',
-    title: 'Форма глагола',
-    values: [{value: 'v_conv', title: 'Деепричастная'}, {value: 'v_fin', title: 'Конечная'}, {value: 'v_inf', title: 'Инфинитивная'},
-    {value: 'v_part', title: 'Причастная'}]
+    title: 'форма глагола',
+    values: [{value: 'conv', title: 'деепричастие'}, {value: 'fin', title: 'личная форма'}, {value: 'inf', title: 'инфинитив'},
+    {value: 'part', title: 'причастие'}]
 };
 
 const auxVerbFormFeature = {
     name: 'verbform',
-    title: 'Форма глагола',
-    values: [{value: 'v_conv', title: 'Деепричастная'}, {value: 'v_fin', title: 'Конечная'}, {value: 'v_inf', title: 'Инфинитивная'}]
+    title: 'форма глагола',
+    values: [{value: 'conv', title: 'деепричастие'}, {value: 'fin', title: 'личная форма'}, {value: 'inf', title: 'инфинитив'}]
 };
 
 const MoodFeature = {
     name: 'mood',
-    title: 'Наклонение',
-    values: [{value: 'm_ind', title: 'Изъявительное'}, {value: 'm_cnd', title: 'Условное'}, {value: 'm_imp', title: 'Повелительное'}]
+    title: 'наклонение',
+    values: [{value: 'ind', title: 'изъявительное'}, {value: 'cnd', title: 'условное'}, {value: 'imp', title: 'повелительное'}]
 };
 
 const verbMoodFeature = {
     name: 'mood',
-    title: 'Наклонение',
-    values: [{value: 'm_ind', title: 'Изъявительное'}, {value: 'm_imp', title: 'Повелительное'}]
+    title: 'наклонение',
+    values: [{value: 'ind', title: 'изъявительное'}, {value: 'imp', title: 'повелительное'}]
 };
 
 const partMoodFeature = {
     name: 'mood',
-    title: 'Наклонение',
-    values: [{value: 'm_cnd', title: 'Условное'}]
+    title: 'наклонение',
+    values: [{value: 'cnd', title: 'условное'}]
 };
 
 const sconjMoodFeature = {
     name: 'mood',
-    title: 'Наклонение',
-    values: [{value: 'm_cnd', title: 'Условное'}]
+    title: 'наклонение',
+    values: [{value: 'cnd', title: 'условное'}]
 };
 
 const auxMoodFeature = {
     name: 'mood',
-    title: 'Наклонение',
-    values: [{value: 'm_ind', title: 'Изъявительное'}, {value: 'm_imp', title: 'Повелительное'}]
+    title: 'наклонение',
+    values: [{value: 'ind', title: 'изъявительное'}, {value: 'imp', title: 'повелительное'}]
 };
 
 const TenseFeature = {
     name:   'tense',
-    title:  'Время',
-    values: [{value: 'pres', title: 'Настоящее'}, {value: 'past', title: 'Прошедшее'}, {value: 'fut', title: 'Будущее'}]
+    title:  'время',
+    values: [{value: 'pres', title: 'настоящее'}, {value: 'past', title: 'прошедшее'}, {value: 'fut', title: 'будущее'}]
 };
 
 const auxTenseFeature = {
     name:   'tense',
-    title:  'Время',
-    values: [{value: 'pres', title: 'Настоящее'}, {value: 'past', title: 'Прошедшее'}]
+    title:  'время',
+    values: [{value: 'pres', title: 'настоящее'}, {value: 'past', title: 'прошедшее'}]
 };
 
 const AspectFeature = {
     name:   'aspect',
-    title:  'Вид',
-    values: [{value: 'a_perf', title: 'Совершенный'}, {value: 'a_imp', title: 'Несовершенный'}]
+    title:  'вид',
+    values: [{value: 'perf', title: 'совершенный'}, {value: 'imp', title: 'несовершенный'}]
 };
 
 const VoiceFeature = {
     name: 'voice',
-    title: 'Залог',
-    values: [{value: 'act', title: 'Действительный(Актив)'}, {value: 'pass', title: 'Страдательный(Пассив)'}, {value: 'mid', title: 'Возвратный(Рефлексив)'}]
+    title: 'залог',
+    values: [{value: 'act', title: 'действительный'}, {value: 'pass', title: 'страдательный'}, {value: 'mid', title: 'возвратный'}]
 };
 
 const PersonFeature = {
     name: 'person',
-    title: 'Лицо',
-    values: [{value: '1', title: 'Первое'}, {value: '2', title: 'Второе'}, {value: '3', title: 'Третье'}]
+    title: 'лицо',
+    values: [{value: '1', title: 'первое'}, {value: '2', title: 'второе'}, {value: '3', title: 'третье'}]
 };
 
 const DegreeFeature = {
     name: 'degree',
-    title: 'Степень',
-    values: [{value: 'd_pos', title: 'Положительная'}, {value: 'd_cmp', title: 'Сравнительная'}, {value: 'd_sup', title: 'Превосходная'}]
+    title: 'степень',
+    values: [{value: 'pos', title: 'положительная'}, {value: 'cmp', title: 'сравнительная'}, {value: 'sup', title: 'превосходная'}]
 };
 
 const PolarityFeature = {
     name: 'polarity',
-    title: 'Полярность',
-    values: [{value: 'p_pos', title: 'Положительная'}, {value: 'p_neg', title: 'Отрицательная'}]
+    title: 'полярность',
+    values: [{value: 'pos', title: 'положительная'}, {value: 'neg', title: 'отрицательная'}]
 };
 
 const advPolarityFeature = {
     name: 'polarity',
-    title: 'Полярность',
-    values: [{value: 'p_neg', title: 'Отрицательная'}]
+    title: 'полярность',
+    values: [{value: 'neg', title: 'отрицательная'}]
 };
 
 const partPolarityFeature = {
     name: 'polarity',
-    title: 'Полярность',
-    values: [{value: 'p_neg', title: 'Отрицательная'}]
+    title: 'полярность',
+    values: [{value: 'neg', title: 'отрицательная'}]
 };
 
 // Feature to part relation

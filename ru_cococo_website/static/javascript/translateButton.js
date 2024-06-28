@@ -55,9 +55,10 @@ $(document).ready(function () {
                 } else if (reverseDictionary[placeholderText]) {
                     node.setAttribute('placeholder', reverseDictionary[placeholderText]);
                 }
+            } else if (node.classList.contains('colligation-word-part') || node.classList.contains('word-part')) {
             } else {
-                node.childNodes.forEach(replaceText);
-            }
+                    node.childNodes.forEach(replaceText);
+                }
         }
 
         let lang = langChangeButton.attr('data-lang')
